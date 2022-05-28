@@ -5,7 +5,6 @@ from tensorflow.keras.models import load_model
 from keras.applications.imagenet_utils import preprocess_input
 from keras.preprocessing import image
 from PIL import Image
-from io import BytesIO
 import numpy as np
 import json
 import os
