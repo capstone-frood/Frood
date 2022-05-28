@@ -1,8 +1,1 @@
-Flask
-gunicorn
-tensorflow
-numpy
-pillow
-matplotlib
-keras 
-numpy
+Flask==1.1.2
