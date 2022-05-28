@@ -1,0 +1,12 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_fruit_vegetables"><![CDATA[Fruit & Vegetables]]></string>
+    <string name="title_meat">Meat</string>
+    <string name="title_home">Home</string>
+    <string name="title_information">Information</string>
+    <string name="plain_room_temp">Room Temp : %d Days</string>
+    <string name="plain_fridge_temp">Fridge Temp : %d Days</string>
+    <string name="plain_detect">Detect</string>
+    <string name="msg_open_galerry">Open Galerry</string>
+    <string name="msg_captured">Captured</string>
+</resources>
