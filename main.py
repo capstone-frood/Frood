@@ -95,11 +95,15 @@ def predict():
         img = resize(image)
         result = predicted(img)
         if result == 1:
-            label = "Cat"
-        elif result==2:
-            label = "Dog"
-        return json.dumps({'name': 'Pisces',
-                       'Result': label})
+            Status = "Fresh"
+            expired = "7 Days (Refrigirator temps)"
+            Note = "Cook it before rotten"
+        return json.dumps({'Status' : Status,'Expired':expired,
+        'Note':Note})
+    else:
+        resp = jsonify({'message': 'Image extension is not allowed'})
+        resp.status_code = 400
+        return resp
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
