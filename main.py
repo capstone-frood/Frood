@@ -63,8 +63,8 @@
 #     app.run(host='0.0.0.0', port=8080)
 
 from flask import Flask, request, jsonify
+from pil import Image
 from tensorflow.keras.preprocessing.image import img_to_array
-from PIL import Image
 from io import BytesIO
 import numpy as np
 import json
