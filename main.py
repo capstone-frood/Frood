@@ -59,7 +59,7 @@
 #     app.run(host='0.0.0.0', port=8080)
 
 from flask import Flask, request, jsonify
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
 from io import BytesIO
 import numpy as np
@@ -81,7 +81,7 @@ def resize(image):
     return img
 
 def predicted(img):
-    return 2
+    return 1
 
 @app.route('/',methods=['GET'])
 def welcome():
@@ -98,12 +98,12 @@ def predict():
             Status = "Fresh"
             expired = "7 Days (Refrigirator temps)"
             Note = "Cook it before rotten"
-        return json.dumps({'Status' : Status,'Expired':expired,
-        'Note':Note})
+
+        return jsonify({'Status' : Status,'Expired':expired,'Note':Note})
     else:
         resp = jsonify({'message': 'Image extension is not allowed'})
         resp.status_code = 400
         return resp
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8080)
