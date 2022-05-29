@@ -59,15 +59,15 @@
 #     app.run(host='0.0.0.0', port=8080)
 
 from flask import Flask, request, jsonify
-from tensorflow import keras
+
 from PIL import Image
 from io import BytesIO
 import numpy as np
 import json
-
+from keras.preprocessing.image import img_to_array
 app = Flask(__name__)
 
-ALLOWED_EXTENSIONS = {'png','jpg','jpeg'}
+ALLOWED_EXTENSIONS = {'jpg','jpeg'}
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -76,7 +76,7 @@ def allowed_file(filename):
 def resize(image):
     img = Image.open(BytesIO(image))
     img = img.resize((224, 224), Image.ANTIALIAS)
-    img = keras.preprocessing.image.img_to_array(img)
+    img = img_to_array(img)
     img = np.expand_dims(img, axis=0)
     return img
 
