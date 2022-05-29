@@ -46,9 +46,6 @@ def predict():
             Status = "Fresh"
             expired = "7 Days (Refrigirator temps)"
             Note = "Cook it before rotten"
-
-        elif result==2:
-            label = "Dog"
         # return json.dumps({'name': 'Pisces',
         #                'Result': label})
         return json.dumps({'Status' : Status,'Expired':expired,
