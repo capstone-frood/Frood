@@ -64,7 +64,7 @@ from PIL import Image
 from io import BytesIO
 import numpy as np
 import json
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import img_to_array
 app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = {'jpg','jpeg'}
