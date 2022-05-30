@@ -58,24 +58,27 @@
 # if __name__ == '__main__':
 #     app.run(host='0.0.0.0', port=8080)
 
+
 from flask import Flask, request, jsonify
-from PIL import Image
-from io import BytesIO
 import numpy as np
-import json
-import tensorflow as tf
+import os
+from werkzeug.utils import secure_filename
+from keras.utils import load_img,img_to_array
 
 app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = {'jpg','jpeg'}
 
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-def resize(image):
-    img = Image.open(BytesIO(image))
-    img = img.resize((224, 224), Image.ANTIALIAS)
+def resize(img_path,image):
+    img = load_img(img_path, target_size=(224, 224))
+    img = img_to_array(img)
+    # img = Image.open(BytesIO(image))
+    # img = img.resize((224, 224), Image.ANTIALIAS)
     img = np.array(img) / 255
     img = np.expand_dims(img, axis=0)
     return img
@@ -84,15 +87,19 @@ def predicted(img):
     return 1
 
 @app.route('/',methods=['GET'])
-def welcome():
-    return "Hello World!"
+def index():
+    return "Hello World"
 
 @app.route('/predict',methods=['POST'])
 def predict():
     image = request.files['image']
     if image and allowed_file(image.filename):
+        basepath = os.path.dirname(__file__)
+        file_path = os.path.join(
+            basepath, 'images', secure_filename(image.filename))
+        image.save(file_path)
         image = image.read()
-        img = resize(image)
+        img = resize(file_path,image)
         result = predicted(img)
         if result == 1:
             Status = "Fresh"
