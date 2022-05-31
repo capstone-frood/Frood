@@ -9,4 +9,7 @@
     <string name="plain_detect">Detect</string>
     <string name="msg_open_galerry">Open Galerry</string>
     <string name="msg_captured">Captured</string>
+    <string name="no_permission">Permission not granted</string>
+    <string name="select_image">Select Image</string>
+    <string name="image_preview">Image Preview</string>
 </resources>
