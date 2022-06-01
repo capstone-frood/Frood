@@ -1,25 +1,32 @@
 package com.frood.app.presentation.ui.scan
 
-import android.app.Activity.RESULT_OK
-import android.content.Intent
-import android.net.Uri
+import android.graphics.Bitmap
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.canhub.cropper.CropImageContract
+import com.canhub.cropper.CropImageView
+import com.canhub.cropper.options
 import com.frood.app.R
 import com.frood.app.databinding.FragmentScanBinding
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
-import java.io.File
 
 class ScanFragment : Fragment() {
 
     private var _binding: FragmentScanBinding? = null
     private val binding get() = _binding!!
-    private var getFile: File? = null
+    private val cropImage = registerForActivityResult(CropImageContract()) { result ->
+        if (result.isSuccessful) {
+            // use the returned uri
+            val uriContent = result.uriContent
+            val uriFilePath = result.getUriFilePath(requireContext())
+            binding.previewImageView.setImageURI(uriContent)// optional usage
+        } else {
+            // an error occurred
+            val exception = result.error
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,26 +41,14 @@ class ScanFragment : Fragment() {
     }
 
     private fun startCropActivity() {
-        CropImage.activity()
-            .setGuidelines(CropImageView.Guidelines.ON)
-            .setGuidelinesColor(R.color.white)
-            .setAspectRatio(1, 1)
-            .start(requireContext(), this)
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            val result: CropImage.ActivityResult = CropImage.getActivityResult(data)
-            if (resultCode == RESULT_OK) {
-                val resultUri: Uri = result.uri
-                binding.previewImageView.setImageURI(resultUri)
-            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) run {
-                val e: Exception = result.error
-                Log.d("error", "error")
-            }
-        }
+        cropImage.launch(options {
+            setGuidelines(CropImageView.Guidelines.ON)
+                .setGuidelinesColor(R.color.white)
+                .setAspectRatio(1, 1)
+                .setOutputCompressFormat(Bitmap.CompressFormat.JPEG)
+                .setImageSource(includeGallery = true, includeCamera = true)
+                .uri
+        })
     }
 
     override fun onDestroyView() {
