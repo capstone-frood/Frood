@@ -1,16 +1,19 @@
-FROM python:3.10
+FROM python:3.9.0
 
-ENV PORT 8080
-ENV HOST 0.0.0.0
+# Copy local code to the container image
+COPY . /app
 
-EXPOSE 8080
-
-RUN apt-get update -y && \
-    apt-get install -y python3-pip
-
-COPY ./requirements.txt /app/requirements.txt
-
+# Sets the working directory
 WORKDIR /app
 
-ENTRYPOINT ["python3"]
-CMD ["main.py"]
+# Upgrade PIP
+RUN pip install --upgrade pip
+
+#Install python libraries from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Set $PORT environment variable
+ENV PORT 8080
+
+# Run the web service on container startup
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
