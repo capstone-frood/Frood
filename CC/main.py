@@ -24,7 +24,7 @@ def resize(image):
     img = np.expand_dims(img, axis=0)
     return img
 
-@app.route('/',methods=['GET'])
+@app.route('/')
 def index():
     return "Hello World"
 
