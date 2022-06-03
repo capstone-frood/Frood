@@ -1,1 +1,5 @@
 runtime: python39
+resources:
+  cpu: 2
+  memory_gb: 7.5
+  disk_size_gb: 20
