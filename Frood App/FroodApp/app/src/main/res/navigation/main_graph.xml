@@ -36,12 +36,20 @@
         android:id="@+id/scanFragment"
         android:name="com.frood.app.presentation.ui.scan.ScanFragment"
         android:label="fragment_scan"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scanFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
     <fragment
         android:id="@+id/informationFragment"
         android:name="com.frood.app.presentation.ui.information.InformationFragment"
         android:label="fragment_information"
-        tools:layout="@layout/fragment_information" >
+        tools:layout="@layout/fragment_information">
         <action
             android:id="@+id/action_informationFragment_to_scanFragment"
             app:destination="@id/scanFragment"
@@ -50,4 +58,8 @@
             app:popEnterAnim="@android:anim/fade_in"
             app:popExitAnim="@android:anim/fade_out" />
     </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.frood.app.presentation.ui.scan.ResultFragment"
+        android:label="ResultFragment" />
 </navigation>

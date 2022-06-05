@@ -7,9 +7,17 @@
     <string name="plain_room_temp">Room Temp : %d Days</string>
     <string name="plain_fridge_temp">Fridge Temp : %d Days</string>
     <string name="plain_detect">Detect</string>
-    <string name="msg_open_galerry">Open Galerry</string>
+    <string name="msg_open_gallery">Open Gallery</string>
     <string name="msg_captured">Captured</string>
     <string name="no_permission">Permission not granted</string>
     <string name="select_image">Select Image</string>
     <string name="image_preview">Image Preview</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="upload_error">Upload Error</string>
+    <string name="no_photo">No Photo Detected</string>
+    <string name="detect_result">Detect Result</string>
+    <string name="status">Status: </string>
+    <string name="note">Note: </string>
+    <string name="expiry">Expiry: </string>
 </resources>

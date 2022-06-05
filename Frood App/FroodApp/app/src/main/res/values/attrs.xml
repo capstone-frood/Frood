@@ -2,4 +2,8 @@
 <resources>
     <attr name="colorIndicatorOn" format="reference|color" />
     <attr name="colorIndicatorOff" format="reference|color" />
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
 </resources>
