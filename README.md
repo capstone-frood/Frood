@@ -30,4 +30,4 @@
   4. Finish
 
 # Links
-1. Citation Link (https://www.google.com/ "Google")
+1. Citation Link ([(https://docs.google.com/document/d/1oPKMXgMTYEcragU3w5Lvcha9GeOVButKNY7Fzq2Frcc/edit?usp=sharing)])
