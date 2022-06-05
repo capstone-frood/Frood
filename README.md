@@ -19,7 +19,7 @@
 
 ## Home
 
-## Detect Screem
+## Detect Screen
 
 ## Information
 
