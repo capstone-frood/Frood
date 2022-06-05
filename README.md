@@ -4,7 +4,9 @@
 
 ## Our Apps Is Build With
 ### Cloud Computing
-* ABC
+* Flask API
+* Google Cloud Platform
+* Cloud Run
 ### Machine Learning
 * TensorFlow
 * Google Colab
