@@ -121,7 +121,7 @@ class ScanFragment : Fragment() {
     }
 
     private fun closeScan() {
-        activity?.supportFragmentManager?.popBackStack()
+        findNavController().navigate(R.id.action_scanFragment_to_homeFragment)
     }
 
     override fun onDestroyView() {

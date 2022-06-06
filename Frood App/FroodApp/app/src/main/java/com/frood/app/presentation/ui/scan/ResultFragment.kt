@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.frood.app.R
 import com.frood.app.databinding.FragmentResultBinding
 
@@ -35,7 +36,7 @@ class ResultFragment : Fragment() {
     }
 
     private fun closeScan() {
-        activity?.supportFragmentManager?.popBackStack()
+        findNavController().navigate(R.id.action_resultFragment_to_homeFragment)
     }
 
     override fun onDestroyView() {
