@@ -31,10 +31,15 @@
 ![image](https://user-images.githubusercontent.com/99663816/172169840-d695cd8d-705d-4654-83a3-a9e6c448bf1d.png)
 
 # How To Use Our App
-  1. Test
-  2. test
-  3. test
-  4. Finish
+  1. Download and open the Frood application
+  2. Click the detect button to scan the freshness of the ingredients
+  3. In the detect button, click the select image to predict the ingredients (camera or gallery)
+  4. After you choose the image, click next and the app will process your image
+  5. Wait for the result page for the prediction
+  6. Click close button to go back to home page 
+  7. Click home page to get some information about ingredients
+  8. Click the information page for tutorial on using the application
+  9. Close the app
 
 # Links
 1. Citation Link (https://bit.ly/froodcitation)
