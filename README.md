@@ -12,8 +12,8 @@
 * Google Colab
 * Jupyter Notebook
 ### :iphone: Mobile Development
-* [android studio]
-* [adobe XD](https://drive.google.com/file/d/1LhRNolMbU9kUkOQfyxC6ElAX1Gt5qbnt/view?usp=sharing)
+* [android studio](https://developer.android.com/studio/preview)
+* [adobe XD](https://www.adobe.com/id_en/products/xd.html)
 
 # Screenshot
 ## Splash Screen
