@@ -13,7 +13,7 @@
 * Jupyter Notebook
 ### :iphone: Mobile Development
 * [android studio]
-* [adobe XD]
+* [adobe XD](https://drive.google.com/file/d/1LhRNolMbU9kUkOQfyxC6ElAX1Gt5qbnt/view?usp=sharing)
 
 # Screenshot
 ## Splash Screen
