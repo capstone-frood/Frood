@@ -14,15 +14,21 @@
 ### :iphone: Mobile Development
 * [android studio](https://developer.android.com/studio/preview)
 * [adobe XD](https://www.adobe.com/id_en/products/xd.html)
+* [CanHub Image Cropper](https://github.com/CanHub/Android-Image-Cropper)
 
 # Screenshot
 ## Splash Screen
-
+![image](https://user-images.githubusercontent.com/99663816/172169730-faeb1838-708f-4246-a013-b03a4237db5b.png)
 ## Home
+![image](https://user-images.githubusercontent.com/99663816/172169766-8276f2a3-c4c1-445e-954f-7ea965b1260e.png)
+![image](https://user-images.githubusercontent.com/99663816/172169798-e53473c0-f4bd-4f23-99b5-a5ec14ac3971.png)
 
 ## Detect Screen
+![image](https://user-images.githubusercontent.com/99663816/172170011-bf5de811-3173-4aa6-8bcd-a0d6da49936e.png)
+![image](https://user-images.githubusercontent.com/99663816/172170125-921df25d-8ead-4b85-9f51-9e8414d7d746.png)
 
 ## Information
+![image](https://user-images.githubusercontent.com/99663816/172169840-d695cd8d-705d-4654-83a3-a9e6c448bf1d.png)
 
 # How To Use Our App
   1. Test
