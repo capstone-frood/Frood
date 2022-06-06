@@ -4,15 +4,16 @@
 
 ## Our Apps Is Build With
 ### :cloud: Cloud Computing
-* Flask API
-* Google Cloud Platform
-* Cloud Run
+* [Flask API](https://flask.palletsprojects.com/en/2.1.x/)
+* [Google Cloud Platform](https://cloud.google.com/gcp/)
+* [Cloud Run](https://cloud.google.com/run/)
 ### :computer: Machine Learning
 * [TensorFlow](https://www.tensorflow.org/)
 * Google Colab
 * Jupyter Notebook
 ### :iphone: Mobile Development
-* ABC
+* [android studio](https://developer.android.com/studio/preview)
+* [adobe XD](https://www.adobe.com/id_en/products/xd.html)
 
 # Screenshot
 ## Splash Screen
