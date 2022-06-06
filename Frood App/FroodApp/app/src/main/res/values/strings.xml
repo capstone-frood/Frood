@@ -17,7 +17,7 @@
     <string name="upload_error">Upload Error</string>
     <string name="no_photo">No Photo Detected</string>
     <string name="detect_result">Detect Result</string>
-    <string name="status">Status: </string>
-    <string name="note">Note: </string>
-    <string name="expiry">Expiry: </string>
+    <string name="status">Status : </string>
+    <string name="note">Note : </string>
+    <string name="expiry">Expiry : </string>
 </resources>
