@@ -12,7 +12,8 @@
 * Google Colab
 * Jupyter Notebook
 ### :iphone: Mobile Development
-* ABC
+* [android studio]
+* [adobe XD]
 
 # Screenshot
 ## Splash Screen
