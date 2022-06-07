@@ -37,9 +37,7 @@ def predict():
         results = model.predict(img)
         max_value = np.max(results)
         if max_value<=0.8:
-            resp = jsonify({'message': 'Image can not be predicted'})
-            resp.status_code = 400
-            return resp
+            return jsonify({'Status' : "-",'Expired':"-",'Note':"Image can not be predicted"})
         elif max_value>0.8:
             result = np.argmax(results, axis=1)
             if result == 0:
@@ -115,10 +113,10 @@ def predict():
                 expired = "Already Expired"
                 Note = "Throw it away"
             return jsonify({'Status' : Status,'Expired':expired,'Note':Note})
-        else:
-            resp = jsonify({'message': 'Image extension is not allowed'})
-            resp.status_code = 400
-            return resp
+    else:
+        resp = jsonify({'message': 'Image extension is not allowed'})
+        resp.status_code = 400
+        return resp
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
