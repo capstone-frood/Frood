@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = {'jpg','jpeg'}
-model_path = 'model/Model_18X_Class_Acc99.h5'
+model_path = 'model/Model_18_No-Overfit_Acc95.h5'
 model = load_model(model_path)
 
 
