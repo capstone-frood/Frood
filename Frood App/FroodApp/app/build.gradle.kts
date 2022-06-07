@@ -84,10 +84,15 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    implementation ("androidx.camera:camera-core:1.0.2")
-    implementation ("androidx.camera:camera-lifecycle:1.0.2")
-    implementation ("com.theartofdev.edmodo:android-image-cropper:2.8.0")
-    implementation ("androidx.activity:activity-ktx:1.6.0-alpha04")
+    implementation("androidx.camera:camera-core:1.0.2")
+    implementation("androidx.camera:camera-lifecycle:1.0.2")
+    implementation("com.github.CanHub:Android-Image-Cropper:4.2.1")
+    implementation("androidx.activity:activity-ktx:1.6.0-alpha04")
+
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.5")
 
     kapt(Dependency.Jetpack.HILT_COMPILER)
     kapt(Dependency.GLIDE_COMPILER)
