@@ -12,8 +12,8 @@
 * [Google Colab](https://research.google.com/colaboratory/)
 * [Jupyter Notebook](https://jupyter.org/)
 ### :iphone: Mobile Development
-* [android studio](https://developer.android.com/studio/preview)
-* [adobe XD](https://www.adobe.com/id_en/products/xd.html)
+* [Android Studio](https://developer.android.com/studio/preview)
+* [Adobe XD](https://www.adobe.com/id_en/products/xd.html)
 * [CanHub Image Cropper](https://github.com/CanHub/Android-Image-Cropper)
 
 # Screenshot
