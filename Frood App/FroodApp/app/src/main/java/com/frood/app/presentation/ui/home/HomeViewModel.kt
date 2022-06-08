@@ -28,13 +28,69 @@ class HomeViewModel : ViewModel(), HomeContract.ViewModel {
             )
 //            Mengisi list buah dan sayur (Editable)
             val fruitList = listOf(
-                Product(id = 1, name = "Apple", imageSrc = R.drawable.img_apple, roomTemp = 5, FridgeTemp = 12),
-                Product(id = 2, name = "Banana", imageSrc = R.drawable.img_banana, roomTemp = 7, FridgeTemp = 12),
-                Product(id = 3, name = "Tomato", imageSrc = R.drawable.img_tomato, roomTemp = 9, FridgeTemp = 20),
-                Product(id = 4, name = "Eggplant", imageSrc = R.drawable.img_eggplant, roomTemp = 7, FridgeTemp = 10),
-                Product(id = 5, name = "Cabbage", imageSrc = R.drawable.img_cabbage, roomTemp = 10, FridgeTemp = 25),
-                Product(id = 6, name = "Orange", imageSrc = R.drawable.img_orange, roomTemp = 20, FridgeTemp = 30),
-                Product(id = 7, name = "Strawberry", imageSrc = R.drawable.img_strawberry, roomTemp = 7, FridgeTemp = 10)
+                Product(
+                    id = 1,
+                    name = "Apple",
+                    imageSrc = R.drawable.img_apple,
+                    roomTemp = 5,
+                    FridgeTemp = 12
+                ),
+                Product(
+                    id = 2,
+                    name = "Banana",
+                    imageSrc = R.drawable.img_banana,
+                    roomTemp = 7,
+                    FridgeTemp = 12
+                ),
+                Product(
+                    id = 3,
+                    name = "Chilli",
+                    imageSrc = R.drawable.img_chili,
+                    roomTemp = 1,
+                    FridgeTemp = 3
+                ),
+                Product(
+                    id = 4,
+                    name = "Collards",
+                    imageSrc = R.drawable.img_collards,
+                    roomTemp = 1,
+                    FridgeTemp = 2
+                ),
+                Product(
+                    id = 5,
+                    name = "Tomato",
+                    imageSrc = R.drawable.img_tomato,
+                    roomTemp = 9,
+                    FridgeTemp = 20
+                ),
+                Product(
+                    id = 6,
+                    name = "Orange",
+                    imageSrc = R.drawable.img_orange,
+                    roomTemp = 20,
+                    FridgeTemp = 30
+                ),
+                Product(
+                    id = 7,
+                    name = "Strawberry",
+                    imageSrc = R.drawable.img_strawberry,
+                    roomTemp = 7,
+                    FridgeTemp = 10
+                ),
+                Product(
+                    id = 8,
+                    name = "Spinach",
+                    imageSrc = R.drawable.img_spinach,
+                    roomTemp = 1,
+                    FridgeTemp = 1
+                ),
+                Product(
+                    id = 9,
+                    name = "Water Spinach",
+                    imageSrc = R.drawable.img_water_spinach,
+                    roomTemp = 1,
+                    FridgeTemp = 3
+                )
             )
 //            Passing ke View
             _meatListObservable.postValue(meatList.sortedBy { a ->
