@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = {'jpg','jpeg'}
-model_path = 'model/Model_18X_Class_Acc99.h5'
+model_path = 'model/Model_18_No-Overfit_Acc95.h5'
 model = load_model(model_path)
 
 
@@ -36,9 +36,9 @@ def predict():
         img = resize(image)
         results = model.predict(img)
         max_value = np.max(results)
-        if max_value<=0.8:
+        if max_value<=0.6:
             return jsonify({'Status' : "-",'Expired':"-",'Note':"Image can not be predicted"})
-        elif max_value>0.8:
+        elif max_value>0.6:
             result = np.argmax(results, axis=1)
             if result == 0:
                 Status = "Fresh Apple"+" ({:.0%})".format(max_value)
@@ -53,7 +53,7 @@ def predict():
                 expired = "5-6 Days (Refrigirator temps)"
                 Note = "Buy it immedietly"
             elif result ==3:
-                Status = "Fresh Kangkung"+" ({:.0%})".format(max_value)
+                Status = "Fresh Water Spinach"+" ({:.0%})".format(max_value)
                 expired = "3 Days (Refrigirator temps)"
                 Note = "Buy it immedietly"
             elif result ==4:
@@ -61,7 +61,7 @@ def predict():
                 expired = "30 Days (Refrigirator temps)"
                 Note = "Eat it slowly, you still have a lot of time"
             elif result ==5:
-                Status = "Fresh Sawi"+" ({:.0%})".format(max_value)
+                Status = "Fresh Collards"+" ({:.0%})".format(max_value)
                 expired = "2-5 Days (Refrigirator temps)"
                 Note = "Buy it immedietly"
             elif result ==6:
@@ -89,7 +89,7 @@ def predict():
                 expired = "Already Expired"
                 Note = "Throw it away immediately in the trashcan"
             elif result ==12:
-                Status = "Spoil Kangkung"+" ({:.0%})".format(max_value)
+                Status = "Spoil Water Spinach"+" ({:.0%})".format(max_value)
                 expired = "Already Expired"
                 Note = "Please don't cook and eat"
             elif result ==13:
@@ -97,7 +97,7 @@ def predict():
                 expired = "Already Expired"
                 Note = "Remember to never eat that"
             elif result ==14:
-                Status = "Spoil Sawi"+" ({:.0%})".format(max_value)
+                Status = "Spoil Collards"+" ({:.0%})".format(max_value)
                 expired = "Already Expired"
                 Note = "Please don't cook and eat"
             elif result ==15:
