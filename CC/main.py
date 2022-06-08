@@ -36,9 +36,9 @@ def predict():
         img = resize(image)
         results = model.predict(img)
         max_value = np.max(results)
-        if max_value<=0.8:
+        if max_value<=0.6:
             return jsonify({'Status' : "-",'Expired':"-",'Note':"Image can not be predicted"})
-        elif max_value>0.8:
+        elif max_value>0.6:
             result = np.argmax(results, axis=1)
             if result == 0:
                 Status = "Fresh Apple"+" ({:.0%})".format(max_value)
