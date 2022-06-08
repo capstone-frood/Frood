@@ -9,8 +9,8 @@
 * [Cloud Run](https://cloud.google.com/run/)
 ### :computer: Machine Learning
 * [TensorFlow](https://www.tensorflow.org/)
-* Google Colab
-* Jupyter Notebook
+* [Google Colab](https://research.google.com/colaboratory/)
+* [Jupyter Notebook](https://jupyter.org/)
 ### :iphone: Mobile Development
 * [android studio](https://developer.android.com/studio/preview)
 * [adobe XD](https://www.adobe.com/id_en/products/xd.html)
