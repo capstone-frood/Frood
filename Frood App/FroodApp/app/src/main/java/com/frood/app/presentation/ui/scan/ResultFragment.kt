@@ -25,9 +25,9 @@ class ResultFragment : Fragment() {
         val note = requireActivity().intent.getStringExtra("note")
         val expiry = requireActivity().intent.getStringExtra("expiry")
         val detectStatus =
-            getString(R.string.note) + " " + note + "\n" +
-                    getString(R.string.status) + " " + status + "\n" +
-                    getString(R.string.expiry) + " " + expiry
+            getString(R.string.status) + " " + status + "\n" +
+                    getString(R.string.expiry) + " " + expiry + "\n" +
+                    getString(R.string.note) + " " + note
         binding.predictStatus.text = detectStatus
         binding.imageClose.setOnClickListener {
             closeScan()
