@@ -115,7 +115,7 @@ def predict():
             return jsonify({'Status' : Status,'Expired':expired,'Note':Note})
     else:
         resp = jsonify({'message': 'Image extension is not allowed'})
-        resp.status_code = 400
+        resp.status_code = 415
         return resp
 
 if __name__ == '__main__':
